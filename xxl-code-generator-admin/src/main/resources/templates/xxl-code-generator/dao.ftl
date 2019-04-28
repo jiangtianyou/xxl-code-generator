@@ -29,7 +29,7 @@ public interface ${classInfo.className}Dao {
     /**
     * Load查询
     */
-    public ${classInfo.className} load(@Param("id") int id);
+    public ${classInfo.className} get(@Param("id") int id);
 
     /**
     * 分页查询Data
