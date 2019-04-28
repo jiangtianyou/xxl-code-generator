@@ -13,8 +13,7 @@ import java.util.Date;
 /**
 *  ${classInfo.classComment}
 */
-public class ${classInfo.className} implements Serializable {
-    private static final long serialVersionUID = 42L;
+public class ${classInfo.className} DataEntity<classInfo.className> {
 
 <#if classInfo.fieldList?exists && classInfo.fieldList?size gt 0>
 <#list classInfo.fieldList as fieldItem >
