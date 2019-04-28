@@ -11,9 +11,9 @@ import java.util.Map;
 /**
 * ${classInfo.classComment}
 *
-* Created by xuxueli on '${.now?string('yyyy-MM-dd HH:mm:ss')}'.
+* Created by jty on '${.now?string('yyyy-MM-dd HH:mm:ss')}'.
 */
-@Controller
+@RestController
 public class ConfController {
 
     @Resource
@@ -23,8 +23,7 @@ public class ConfController {
     * 新增
     */
     @RequestMapping("/insert")
-    @ResponseBody
-    public ReturnT<String> insert(${classInfo.className} ${classInfo.className?uncap_first}){
+    public ReturnMsg insert(${classInfo.className} ${classInfo.className?uncap_first}){
         return ${classInfo.className?uncap_first}Service.insert(${classInfo.className?uncap_first});
     }
 
@@ -32,7 +31,7 @@ public class ConfController {
     * 删除
     */
     @RequestMapping("/delete")
-    @ResponseBody
+
     public ReturnT<String> delete(int id){
         return ${classInfo.className?uncap_first}Service.delete(id);
     }
@@ -41,7 +40,6 @@ public class ConfController {
     * 更新
     */
     @RequestMapping("/update")
-    @ResponseBody
     public ReturnT<String> update(${classInfo.className} ${classInfo.className?uncap_first}){
         return ${classInfo.className?uncap_first}Service.update(${classInfo.className?uncap_first});
     }
@@ -50,7 +48,6 @@ public class ConfController {
     * Load查询
     */
     @RequestMapping("/load")
-    @ResponseBody
     public ReturnT<String> load(int id){
         return ${classInfo.className?uncap_first}Service.load(id);
     }
@@ -59,7 +56,6 @@ public class ConfController {
     * 分页查询
     */
     @RequestMapping("/pageList")
-    @ResponseBody
     public Map<String, Object> pageList(@RequestParam(required = false, defaultValue = "0") int offset,
                                         @RequestParam(required = false, defaultValue = "10") int pagesize) {
         return ${classInfo.className?uncap_first}Service.pageList(offset, pagesize);
