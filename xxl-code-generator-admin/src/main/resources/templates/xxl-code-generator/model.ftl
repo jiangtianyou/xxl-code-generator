@@ -12,19 +12,13 @@ import java.util.Date;
 
 /**
 *  ${classInfo.classComment}
-*
-*  Created by xuxueli on '${.now?string('yyyy-MM-dd HH:mm:ss')}'.
 */
 public class ${classInfo.className} implements Serializable {
     private static final long serialVersionUID = 42L;
 
 <#if classInfo.fieldList?exists && classInfo.fieldList?size gt 0>
 <#list classInfo.fieldList as fieldItem >
-    /**
-    * ${fieldItem.fieldComment}
-    */
-    private ${fieldItem.fieldClass} ${fieldItem.fieldName};
-
+    private ${fieldItem.fieldClass} ${fieldItem.fieldName}; // ${fieldItem.fieldComment}
 </#list>
 </#if>
 

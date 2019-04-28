@@ -119,9 +119,10 @@ $(function () {
             dataType : "json",
             success : function(data){
                 if (data.code == 200) {
-                    layer.open({
+                    layer.msg("代码生成成功",{
                         icon: '1',
-                        content: "代码生成成功" ,
+                        // content:  '',
+                        time:1000,
                         end: function(layero, index){
 
                             controller_ide.setValue(data.data.controller_code);
